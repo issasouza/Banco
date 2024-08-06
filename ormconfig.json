@@ -1,0 +1,12 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "root",
+  "database": "postgres",
+  "entities": [
+      "src/cliente/interface/cliente.interface.ts"
+  ],
+  "synchronize": true
+}

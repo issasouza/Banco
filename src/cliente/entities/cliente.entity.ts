@@ -1,10 +1,39 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {
+    Entity,
+    Column,
+    PrimaryGeneratedColumn,
+    OneToOne,
+    JoinColumn,
+  } from 'typeorm';
 
-Entity()
+
+@Entity('cliente')
 export class Cliente {
-    @PrimaryGeneratedColumn()
     
+    @PrimaryGeneratedColumn('uuid')
+    public id: string;     
+
+    @Column()
+    public nomeCompleto: string;
+
+    @Column()
+    public endereco: string;
+
+    @Column()
+    public telefone:string;
+
+    constructor(nomeCompleto:string, endereco:string, telefone:string, id?: string,){
+        
+        this.endereco = endereco
+        this.nomeCompleto =nomeCompleto
+        this.telefone = telefone
+
+        if (!id) {
+            this.id = id;
+          }
+    }
 }
+
 /*-nomeCompleto: String
 -id: String
 -endereco: String
