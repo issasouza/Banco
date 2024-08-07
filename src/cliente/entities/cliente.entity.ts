@@ -1,3 +1,4 @@
+import { Gerente } from 'src/gerente/entities/gerente.entity';
 import {
     Entity,
     Column,
@@ -21,6 +22,7 @@ export class Cliente {
 
     @Column()
     public telefone:string;
+    gerente: Gerente;
 
     constructor(nomeCompleto:string, endereco:string, telefone:string, id?: string,){
         

@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { ClienteModule } from './cliente/cliente.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Cliente } from './cliente/entities/cliente.entity';
+import { GerenteModule } from './gerente/gerente.module';
+import { Gerente } from './gerente/entities/gerente.entity';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -13,10 +15,10 @@ import { Cliente } from './cliente/entities/cliente.entity';
     database:'postgres',
     username:'postgres',
     password:'root',
-    entities:[Cliente],
+    entities:[Cliente,Gerente],
     synchronize:true,
   }), 
-  ClienteModule
+  ClienteModule, GerenteModule
 ],
   controllers: [AppController],
   providers: [AppService],
