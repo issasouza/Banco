@@ -16,7 +16,7 @@ export class GerenteController {
     return this.gerenteService.create(gerente);
   }
 
-  @Get()
+  @Get(':managerId')
   findAll() {
     return this.gerenteService.findAll();
   }

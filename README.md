@@ -1,4 +1,4 @@
-<h1 align="center">Comunas Bank &#9773<h1>
+<h1 align="center"> Bank &#9773<h1>
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="" width="200" alt="Nest Logo" /></a>

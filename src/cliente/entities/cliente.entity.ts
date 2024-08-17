@@ -5,6 +5,8 @@ import {
     PrimaryGeneratedColumn,
     OneToOne,
     JoinColumn,
+    ManyToMany,
+    ManyToOne,
   } from 'typeorm';
 
 
@@ -22,13 +24,17 @@ export class Cliente {
 
     @Column()
     public telefone:string;
-    gerente: Gerente;
+
+    //@ManyToOne(() => Gerente, gerente => gerente.clientes)
+    //@JoinColumn({})
+    gerente?: Gerente;
 
     constructor(nomeCompleto:string, endereco:string, telefone:string, id?: string,){
         
         this.endereco = endereco
         this.nomeCompleto =nomeCompleto
         this.telefone = telefone
+        this.gerente = null
 
         if (!id) {
             this.id = id;

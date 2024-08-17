@@ -10,12 +10,13 @@ export class Gerente {
     @Column()
     nomeGerente: string;
 
-    @OneToMany(() => Cliente, cliente => cliente.gerente)
-    clientes: Cliente[];
+   // @OneToMany(() => Cliente, cliente => cliente.gerente)
+    //@JoinColumn({  })
+    //clientes: Cliente[];
 
     constructor(nomeGerente: string, id?:string){
         this.nomeGerente = nomeGerente
-        
+        //this.clientes = []
 
         if (!id) {
             this.id = id;
