@@ -21,12 +21,12 @@ export class ClienteController {
 
   @Get()
   findAll() {
-    return this.clienteService.findAll();
+    return this.clienteService.findAllCliente();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.clienteService.findOne(id);
+    return this.clienteService.findOneCliente(id);
   }
 
   @Patch(':id')

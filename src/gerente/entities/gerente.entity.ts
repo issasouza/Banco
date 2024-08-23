@@ -10,9 +10,9 @@ export class Gerente {
     @Column()
     nomeGerente: string;
 
-   // @OneToMany(() => Cliente, cliente => cliente.gerente)
-    //@JoinColumn({  })
-    //clientes: Cliente[];
+    @OneToMany(() => Cliente, cliente => cliente.gerente)
+    @JoinColumn({  })
+    clientes: Cliente[];
 
     constructor(nomeGerente: string, id?:string){
         this.nomeGerente = nomeGerente
