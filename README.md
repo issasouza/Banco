@@ -1,11 +1,10 @@
-<h1 align="center"> Bank &#9773<h1>
+<h1 align="center"> Banquinho<h1>
 
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="" width="200" alt="Nest Logo" /></a>
+  <a href="logo.png" target="blank"><img src="" width="200" alt=" Logo" /></a>
 </p>
 
-[circleci-image]:
-[circleci-url]: 
+ 
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
+  <p align="center"> Projeto integrador para o curso intensivo em javascript pela reprograma</p>
+  <p align="center">

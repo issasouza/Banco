@@ -12,7 +12,7 @@ export class ClienteService {
     @InjectRepository(Cliente)
     private clienteRepository: Repository<Cliente>,
   ) {}
-
+//
 
   create(createClienteDto: CreateClienteDto): Promise<Cliente> {
     const cliente = this.clienteRepository.create(createClienteDto);
@@ -20,11 +20,11 @@ export class ClienteService {
   }
 
 
-  findAll(): Promise<Cliente[]> {
+  findAllCliente(): Promise<Cliente[]> {
     return this.clienteRepository.find();
   }
 
-  findOne(id:string ): Promise<Cliente> {
+  findOneCliente(id:string ): Promise<Cliente> {
     return this.clienteRepository.findOneBy({ id });
   }
 

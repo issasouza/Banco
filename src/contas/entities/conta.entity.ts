@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { TipoConta } from "../contas-tipo.enum";
 import { Cliente } from "src/cliente/entities/cliente.entity";
 import { ContaInterface } from "../conta.interface";
@@ -16,8 +16,10 @@ export class Conta implements ContaInterface {
     @Column()
     total: number;
 
-    @Column()
-    cliente: Cliente
+    
+    @ManyToOne(() => Cliente, cliente => cliente.contas)  // Define a relação com a entidade Cliente
+    cliente: Cliente;
+    
 
     getTotal(): number {
         return this.total;

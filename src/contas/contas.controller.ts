@@ -11,17 +11,18 @@ export class ContasController {
   create(@Body() createContaDto: CreateContaDto) {
     return this.contasService.create(createContaDto);
   }
-
-
-
-
-/*  
   
-
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.contasService.findOne(+id);
   }
+
+
+
+
+/*  ESPERA AI 
+  
+
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateContaDto: UpdateContaDto) {
