@@ -4,6 +4,7 @@ import { UpdateGerenteDto } from './dto/update-gerente.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Gerente } from './entities/gerente.entity';
 import { Repository } from 'typeorm';
+import { Cliente } from 'src/cliente/entities/cliente.entity';
 
 @Injectable()
 export class GerenteService {
@@ -34,4 +35,5 @@ export class GerenteService {
   async remove(id: string):Promise<void> {
    await this.gerenteRepository.delete(id);
   }
+
 }

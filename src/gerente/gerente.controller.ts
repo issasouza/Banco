@@ -3,6 +3,7 @@ import { GerenteService } from './gerente.service';
 import { CreateGerenteDto } from './dto/create-gerente.dto';
 import { UpdateGerenteDto } from './dto/update-gerente.dto';
 import { Gerente } from './entities/gerente.entity';
+import { Cliente } from 'src/cliente/entities/cliente.entity';
 
 @Controller('gerente')
 export class GerenteController {
@@ -10,13 +11,11 @@ export class GerenteController {
 
   @Post()
   create(@Body() createGerenteDto: CreateGerenteDto) {
-    const gerente = new Gerente(
-      createGerenteDto.nomeGerente
-    )
+    const gerente = new Gerente(createGerenteDto.nomeGerente);
     return this.gerenteService.create(gerente);
   }
 
-  @Get(':managerId')
+  @Get()
   findAll() {
     return this.gerenteService.findAll();
   }
@@ -35,4 +34,6 @@ export class GerenteController {
   remove(@Param('id') id: string) {
     return this.gerenteService.remove(id);
   }
+
+
 }
