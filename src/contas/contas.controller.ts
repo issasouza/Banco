@@ -17,13 +17,6 @@ export class ContasController {
     return this.contasService.findOne(+id);
   }
 
-
-
-
-/*  ESPERA AI 
-  
-
-
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateContaDto: UpdateContaDto) {
     return this.contasService.update(+id, updateContaDto);
@@ -32,5 +25,5 @@ export class ContasController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.contasService.remove(+id);
-  } */
+  } 
 }
